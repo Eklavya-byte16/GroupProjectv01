@@ -1,11 +1,11 @@
-// 1. Import 'server' alongside app from your app.js file
+
 import { app, server } from "./app.js"; 
 import mongoose from "mongoose";
 import dns from "dns";
-// 2. Import the Socket.IO Server engine
+
 import {initSocket} from "./src/Service/ScoketService.js"
 
-const port = process.env.DEVLOPMENT_PORT || "5000"; // Note: Python script must target this port!
+const port = process.env.DEVLOPMENT_PORT || "5000"; 
 const environment = process.env.BACKEND_ENV || "DEVELOPMENT";
 const database_url = process.env.DATABASE_URL;
 
@@ -84,8 +84,6 @@ const startServer = async () => {
     console.error("❌ Could not connect to database. Exiting.");
     process.exit(1);
   }
-
-  // 5. CRUCIAL FIX: Change from app.listen to server.listen 
   server.listen(port, () => {
     console.log(`\n🟢 Server running on port ${port} [${environment}]`);
   });
