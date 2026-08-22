@@ -1,0 +1,78 @@
+@import "../styles/theme.css";
+
+.home { display: flex; flex-direction: column; min-height: 100vh; }
+
+.home-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  background: var(--ink);
+}
+.home-brand {
+  font-family: var(--font-display);
+  color: var(--white);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.home-nav-actions { display: flex; gap: 0.75rem; }
+.home-nav-actions .btn-ghost { color: var(--white); border-color: rgba(255,255,255,0.25); }
+.home-nav-actions .btn-ghost:hover { border-color: var(--white); }
+
+.home-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ledger-strip { display: flex; gap: 0.5rem; margin-bottom: 2rem; }
+.ledger-mark {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1.5px solid var(--paper-line);
+}
+.ledger-mark.is-check { color: var(--pass-green); border-color: var(--pass-green); }
+.ledger-mark.is-cross { color: var(--pen-red); border-color: var(--pen-red); }
+.ledger-mark.is-ai { color: var(--graphite-muted); font-family: var(--font-mono); font-size: 0.65rem; }
+
+.home-headline { font-size: 2.25rem; line-height: 1.2; margin-bottom: 1rem; }
+.home-sub { color: var(--graphite-muted); line-height: 1.6; margin-bottom: 2rem; }
+.home-cta { display: flex; gap: 0.9rem; }
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 3rem 2.5rem;
+  border-top: 1px solid var(--paper-line);
+  max-width: 960px;
+  margin: 0 auto;
+}
+.home-feature-index { display: block; color: var(--pen-red); font-size: 0.8rem; margin-bottom: 0.5rem; }
+.home-feature h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+.home-feature p { color: var(--graphite-muted); font-size: 0.9rem; line-height: 1.5; margin: 0; }
+.home-feature-soon { font-style: italic; }
+
+.home-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--graphite-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--paper-line);
+}
+
+@media (max-width: 720px) {
+  .home-features { grid-template-columns: 1fr; }
+  .home-nav { padding: 1rem 1.25rem; }
+}
